@@ -29,7 +29,7 @@ jobs:
           context: ./S-MAPI
           file: ./S-MAPI/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-GITBACK:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-gitback:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./F-API
           file: ./F-API/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-GITFRONT:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-gitfront:latest
